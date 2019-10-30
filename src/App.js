@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useSpring, animated } from "react-spring";
 import range from "lodash/range";
+import clamp from "lodash/clamp";
 import "./App.css";
 
 const DEFAULT_ATOM_COUNT = 5;
@@ -22,14 +23,14 @@ function App() {
     <>
       <button
         onClick={() => {
-          setNoOfAtoms(noOfAtoms + 1);
+          setNoOfAtoms(clamp(noOfAtoms + 1, 1, Number.MAX_SAFE_INTEGER));
         }}
       >
         ADD BALL
       </button>
       <button
         onClick={() => {
-          setNoOfAtoms(noOfAtoms - 1);
+          setNoOfAtoms(clamp(noOfAtoms - 1, 1, Number.MAX_SAFE_INTEGER));
         }}
       >
         REMOVE BALL
