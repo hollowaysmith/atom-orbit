@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/atom-orbit/precache-manifest.f42cec9d64a51d504f6f440d74663383.js"
+  "/atom-orbit/precache-manifest.7fd9d9374d4fa323af997230d8e7bc0f.js"
 );
 
 self.addEventListener('message', (event) => {
