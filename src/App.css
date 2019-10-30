@@ -1,0 +1,48 @@
+@keyframes anim-clockwise {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes anim-anticlockwise {
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+
+.App {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.App--clockwise {
+  animation: anim-clockwise 4s linear infinite;
+}
+
+.App--anticlockwise {
+  animation: anim-clockwise 4s linear infinite reverse;
+}
+
+.App--static {
+}
+
+.atom {
+  position: relative;
+  width: 100px;
+  background: purple;
+}
+
+.atom::after {
+  position: absolute;
+  right: 0px;
+  content: "";
+  display: block;
+  border-radius: 100%;
+  width: 10px;
+  height: 10px;
+  background: red;
+  transform-origin: 50% 50%;
+}
